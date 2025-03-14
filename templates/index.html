@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Piadas contra mães</title>
+</head>
+<body>
+    <header>
+        <h1>Yo mama!</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="piada">
+                    {{ piada }}
+                </div>
+                <button id="nova-piada">Gerar Nova Piada</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por: Heitor Schutz</p>
+        <p>API: <a href="https://www.yomama-jokes.com/api/v1/jokes/random/">yomomma-apiv2</a></p>
+    </footer>
+    <script>
+        document.getElementById("nova-piada").addEventListener("click", function() {
+            fetch("/nova_piada")
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelector(".piada").innerText = data.piada;
+                })
+                .catch(error => console.error("Sua mãe é tão sem graça que não achamos piadas sobre ela", error));
+        });
+    </script>
+</body>
+</html>
