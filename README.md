@@ -1,0 +1,1 @@
+Esse pequeno site foi feito durante uma das aulas de API do SENAI, por ser um projeto iniciante e a API ser de origem Americana, a tradução feita pode não ser coerente com a piada, mas ainda assim foi divertido fazer.
