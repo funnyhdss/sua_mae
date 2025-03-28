@@ -34,6 +34,7 @@ def obter_piada_traduzida():
     except KeyError:
         return 'Erro na estrutura da API.'
     except Exception as e:
+        print(e)
         return f'Erro na tradução: {e}'
 
 #
