@@ -37,4 +37,4 @@ def obter_piada_traduzida():
         return f'Erro na tradução: {e}'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
