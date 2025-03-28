@@ -36,5 +36,7 @@ def obter_piada_traduzida():
     except Exception as e:
         return f'Erro na tradução: {e}'
 
+#
+
 if __name__ == '__main__':
     app.run()
